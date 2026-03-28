@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import { useParams } from "next/navigation";
 import IconCard from "@/app/components/iconCard";
-import { Icon } from "@/app/interfaces/icon";
+import { Types } from "@/app/interfaces/types";
 import {useState} from "react";
 import {useEffect} from "react";
 
@@ -15,7 +15,7 @@ const Container = styled.div`
 
 export default function QueryPage() {
     const params = useParams();
-    const [data, setData] = useState<Icon[]>([]);
+    const [data, setData] = useState<Types[]>([]);
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(true);
 
@@ -42,7 +42,7 @@ export default function QueryPage() {
         <div>
             <h1>Icons for &quot;{params.query}&quot;</h1>
             <Container>
-                {data.map((icon: Icon) => (
+                {data.map((icon: Types) => (
                     <IconCard key={icon.id} {...icon} />
                 ))}
             </Container>

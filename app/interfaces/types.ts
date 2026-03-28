@@ -1,4 +1,4 @@
-export type Icon = {
+export type Types = {
     id: number;
     name: string;
     description: string;

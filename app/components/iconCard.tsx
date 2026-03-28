@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Icon } from "@/app/interfaces/icon";
+import { Types } from "@/app/interfaces/types";
 
 const IconCardWrapper = styled.div`
     display: flex;
@@ -14,7 +14,7 @@ const IconCardWrapper = styled.div`
     text-align: center;
 `;
 
-export default function IconCard(props: Icon) {
+export default function IconCard(props: Types) {
     const thumb = props.thumbnails?.[0]?.url;
 
     return (
